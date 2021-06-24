@@ -15,5 +15,14 @@
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="log_in">Log in</string>
+    <string name="hello">Hello!</string>
+    <string name="welcome_shoe_store">Welcome to Shoe Store!</string>
+    <string name="to_instruction">Shoes Instruction</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="shoe_instruction">Shoe Instruction</string>
+    <string name="shoe_instruction_contents">"A shoe is an item of footwear intended to protect and comfort the human foot. Shoes are also used as an item of decoration and fashion. The design of shoes has varied enormously through time and from culture to culture, with appearance originally being tied to function. "</string>
+    <string name="check_shoe_list">Check Shoe List</string>
+    <string name="to_shoe_detail">To Shoe Detail</string>
 
 </resources>

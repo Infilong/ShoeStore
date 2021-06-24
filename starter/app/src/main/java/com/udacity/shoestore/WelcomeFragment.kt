@@ -4,21 +4,25 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
+import com.udacity.shoestore.databinding.WelcomeFragmentBinding
 
 class WelcomeFragment : Fragment() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-    }
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?): View {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.welcome_fragment, container, false)
+        val binding: WelcomeFragmentBinding =
+            DataBindingUtil.inflate(
+                inflater, R.layout.welcome_fragment, container, false
+            )
+        binding.toInstruction.setOnClickListener {
+            findNavController()
+                .navigate(WelcomeFragmentDirections.actionWelcomeFragmentToInstructionFragment())
+        }
+        return binding.root
     }
 
 
