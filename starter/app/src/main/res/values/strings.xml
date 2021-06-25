@@ -24,5 +24,6 @@
     <string name="shoe_instruction_contents">"A shoe is an item of footwear intended to protect and comfort the human foot. Shoes are also used as an item of decoration and fashion. The design of shoes has varied enormously through time and from culture to culture, with appearance originally being tied to function. "</string>
     <string name="check_shoe_list">Check Shoe List</string>
     <string name="to_shoe_detail">To Shoe Detail</string>
+    <string name="log_out">Log Out</string>
 
 </resources>
