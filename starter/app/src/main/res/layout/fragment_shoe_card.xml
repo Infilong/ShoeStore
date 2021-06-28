@@ -51,7 +51,8 @@
                     android:layout_height="wrap_content"
                     android:autofillHints="@string/shoe_size"
                     android:inputType="number"
-                    android:text="@{shoe.size}" />
+                    android:text="@{String.valueOf(shoe.size)}" />
+                <!--shoe.size is Int which is the reason why  android:text="@{shoe.size} will cause app crash"-->
 
                 <EditText
                     android:id="@+id/shoe_description_card_view"

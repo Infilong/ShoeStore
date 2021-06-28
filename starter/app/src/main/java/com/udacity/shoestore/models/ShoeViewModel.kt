@@ -18,8 +18,8 @@ class ShoeViewModel : ViewModel() {
         _shoeList.value = originShoeList()
     }
 
-    fun addShoe(shoe: Shoe) {
-        var newShoe = Shoe("", "", 0, "")
+    fun addShoeToList(newShoe: Shoe){
+        _shoeList.value?.add(newShoe)
     }
 
     private fun originShoeList(): MutableList<Shoe> {

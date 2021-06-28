@@ -17,6 +17,7 @@ import com.udacity.shoestore.models.ShoeViewModel
 class ShoeDetailFragment : Fragment() {
     private lateinit var binding: FragmentShoeDetailBinding
     private lateinit var viewModel: ShoeViewModel
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -49,10 +50,12 @@ class ShoeDetailFragment : Fragment() {
                 binding.shoeSizeInput.text.toString().toInt(),
                 binding.shoeDesciptionInput.text.toString()
             ))
-            //viewModel.addShoe(newShoe)
-            findNavController().navigate(ShoeDetailFragmentDirections.actionShoeDetailFragmentToShoeListFragment())
-        }
+            viewModel.addShoeToList(newShoe)
 
+
+
+        }
+        findNavController().navigate(ShoeDetailFragmentDirections.actionShoeDetailFragmentToShoeListFragment())
     }
 
 
