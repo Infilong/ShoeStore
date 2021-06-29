@@ -51,12 +51,7 @@ class ShoeDetailFragment : Fragment() {
                 binding.shoeDesciptionInput.text.toString()
             ))
             viewModel.addShoeToList(newShoe)
-
-
-
+            findNavController().navigate(ShoeDetailFragmentDirections.actionShoeDetailFragmentToShoeListFragment())
         }
-        findNavController().navigate(ShoeDetailFragmentDirections.actionShoeDetailFragmentToShoeListFragment())
     }
-
-
 }
