@@ -24,7 +24,7 @@ class ShoeDetailFragment : Fragment() {
     ): View {
         // Inflate the layout for this fragment
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_shoe_detail, container, false)
-        viewModel = ViewModelProvider(this).get(ShoeViewModel::class.java)
+        viewModel = ViewModelProvider(requireActivity()).get(ShoeViewModel::class.java)
 
         binding.cancel.setOnClickListener {
             findNavController().navigate(ShoeDetailFragmentDirections.actionShoeDetailFragmentToShoeListFragment())
