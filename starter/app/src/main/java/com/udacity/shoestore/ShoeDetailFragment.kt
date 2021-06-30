@@ -47,7 +47,7 @@ class ShoeDetailFragment : Fragment() {
             val newShoe = (Shoe(
                 binding.shoeNameInput.text.toString(),
                 binding.shoeCompanyInput.text.toString(),
-                binding.shoeSizeInput.text.toString().toInt(),
+                binding.shoeSizeInput.text.toString(),
                 binding.shoeDesciptionInput.text.toString()
             ))
             viewModel.addShoeToList(newShoe)

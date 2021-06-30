@@ -31,7 +31,7 @@ class ShoeListFragment : Fragment() {
         }
         setHasOptionsMenu(true)
         viewModel = ViewModelProvider(requireActivity()).get(ShoeViewModel::class.java)
-        binding.shoeListViewModel = viewModel
+        //binding.shoeList = viewModel
 
         getShoeList()
         // Inflate the layout for this fragment
