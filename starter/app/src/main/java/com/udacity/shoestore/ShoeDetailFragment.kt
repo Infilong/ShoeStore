@@ -26,6 +26,8 @@ class ShoeDetailFragment : Fragment() {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_shoe_detail, container, false)
         viewModel = ViewModelProvider(requireActivity()).get(ShoeViewModel::class.java)
 
+        binding.viewModel = viewModel
+        binding.lifecycleOwner = this
         binding.cancel.setOnClickListener {
             findNavController().navigate(ShoeDetailFragmentDirections.actionShoeDetailFragmentToShoeListFragment())
         }
@@ -37,18 +39,18 @@ class ShoeDetailFragment : Fragment() {
     }
 
     private fun clickSave() {
-        if (TextUtils.isEmpty(binding.shoeNameInput.text.toString()) ||
-            TextUtils.isEmpty(binding.shoeCompanyInput.text.toString()) ||
-            TextUtils.isEmpty(binding.shoeSizeInput.text.toString()) ||
-            TextUtils.isEmpty(binding.shoeDesciptionInput.text.toString())
+        if (TextUtils.isEmpty(viewModel.shoe.name) ||
+            TextUtils.isEmpty(viewModel.shoe.company) ||
+            TextUtils.isEmpty(viewModel.shoe.size) ||
+            TextUtils.isEmpty(viewModel.shoe.description)
         ) {
             Toast.makeText(requireContext(), "Please Fill All Columns", Toast.LENGTH_SHORT).show()
         } else {
             val newShoe = (Shoe(
-                binding.shoeNameInput.text.toString(),
-                binding.shoeCompanyInput.text.toString(),
-                binding.shoeSizeInput.text.toString(),
-                binding.shoeDesciptionInput.text.toString()
+                viewModel.shoe.name,
+                viewModel.shoe.company,
+                viewModel.shoe.size,
+                viewModel.shoe.description
             ))
             viewModel.addShoeToList(newShoe)
             findNavController().navigate(ShoeDetailFragmentDirections.actionShoeDetailFragmentToShoeListFragment())

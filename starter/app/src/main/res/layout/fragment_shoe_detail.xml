@@ -7,7 +7,7 @@
     <data>
 
         <variable
-            name="shoeDetailToShoeViewModel"
+            name="viewModel"
             type="com.udacity.shoestore.models.ShoeViewModel" />
     </data>
 
@@ -79,7 +79,7 @@
             android:ems="10"
             android:hint="@string/shoe_name"
             android:inputType="textPersonName"
-            android:text="@={shoeDetailToShoeViewModel.shoe.name}"
+            android:text="@={viewModel.shoe.name}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.027"
             app:layout_constraintStart_toEndOf="@+id/shoe_name"
@@ -94,7 +94,7 @@
             android:ems="10"
             android:hint="@string/company"
             android:inputType="textPersonName"
-            android:text="@={shoeDetailToShoeViewModel.shoe.company}"
+            android:text="@={viewModel.shoe.company}"
             app:layout_constraintStart_toStartOf="@+id/shoe_name_input"
             app:layout_constraintTop_toBottomOf="@+id/shoe_name_input" />
 
@@ -107,7 +107,7 @@
             android:ems="10"
             android:hint="@string/shoe_size"
             android:inputType="number"
-            android:text="@={shoeDetailToShoeViewModel.shoe.size}"
+            android:text="@={viewModel.shoe.size}"
             app:layout_constraintStart_toStartOf="@+id/shoe_company_input"
             app:layout_constraintTop_toBottomOf="@+id/shoe_company_input" />
 
@@ -120,7 +120,7 @@
             android:ems="10"
             android:hint="@string/shoe_description"
             android:inputType="textPersonName"
-            android:text="@={shoeDetailToShoeViewModel.shoe.description}"
+            android:text="@={viewModel.shoe.description}"
             app:layout_constraintStart_toStartOf="@+id/shoe_size_input"
             app:layout_constraintTop_toBottomOf="@+id/shoe_size_input" />
 
